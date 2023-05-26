@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .btn-container {
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .btn-danger {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>List Manager</h1>
+    <form id="itemForm">
+      <label for="titleInput">Website Regex:</label>
+      <input type="text" id="titleInput" placeholder="Enter regex matching websites" required>
+      <label for="contentInput">Script:</label>
+      <textarea id="contentInput" rows="3" placeholder="Enter script" required></textarea>
+      <div class="btn-container">
+        <button type="submit" class="btn">Add Item</button>
+      </div>
+    </form>
+    <ul id="itemList"></ul>
+    <!-- <div class="btn-container">
+      <button id="clearListBtn" class="btn btn-danger">Clear List</button>
+    </div> -->
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
